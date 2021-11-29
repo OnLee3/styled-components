@@ -1,20 +1,16 @@
 import styled, { keyframes } from "styled-components";
 
 const Title = styled.h1`
-  color: red;
-  &:hover {
-      color: yellow;
-  }
+  color: ${(props) => props.theme.textColor}
 `;
 
 const Wrapper = styled.div`
+  background-color: ${(props) => props.theme.backgroundColor};
   display: flex;
+  width: 100vw;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  ${Title}:hover {
-    font-size: 98px;
-  }
 `;
 
 function App() {
